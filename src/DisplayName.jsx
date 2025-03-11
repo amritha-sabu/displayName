@@ -22,6 +22,7 @@ const DisplayName = () => {
 
     return(
         <div className="displayName">
+            <h1>Full Name Display</h1>
             <form className="form" onSubmit={(e) => handleSubmit(e)}>
                 <div>
                     <label htmlFor="firstName">First Name </label>
@@ -31,7 +32,7 @@ const DisplayName = () => {
                     <label htmlFor="lastName">Last Name </label>
                     <input type="text" name="lastName" value={lastName} onChange={(e) => handleChange(e)} required/>
                 </div>
-                <button style={firstName && lastName ? {cursor: "pointer"} : {color: "grey", cursor: "not-allowed"}}>Submit</button>
+                <button type="submit" style={firstName && lastName ? {cursor: "pointer"} : {color: "grey", cursor: "not-allowed"}}>Submit</button>
             </form>
 
             {fullName && 
